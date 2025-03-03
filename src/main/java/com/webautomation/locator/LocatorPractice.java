@@ -61,7 +61,7 @@ public class LocatorPractice {
 
         Thread.sleep(4000);
 
-        driver.findElement(By.id("btnclosepaxoption")).click();
+        driver.findElement(By.id("btnquitpaxoption")).click();
 
 
         Thread.sleep(4000);
@@ -79,18 +79,62 @@ public class LocatorPractice {
 
 
         List<WebElement> options = driver.findElements(By.xpath("//div[@id='dropdownGroup1']//child::div[@class='dropdownDiv']//child::ul[1]//child::li"));
-        System.out.println("ini adldaj options" + options);
+        // System.out.println("ini adalah options" + options);
 
         for (WebElement element : options){
             System.out.println("list country" + element.getText());
             if (element.getText().equals("Durgapur (RDP)")) {
+            // System.out.println("list country" + element.getText());
+            if (element.getText().equals("Delhi (DEL)")) {
                 element.click();
                 break;
+                }   
             }
         }
 
         Thread.sleep(4000);
 
-        driver.close();
+        List<WebElement> arrivalCity = driver.findElements(By.xpath("(//div[@id='dropdownGroup1']//child::div[@class='dropdownDiv']//child::ul[1])[2]//child::li"));
+
+        for(WebElement element: arrivalCity){
+            System.out.println("List Country: "+ element.getText());
+            if (element.getText().equals("Chennai MAA")) {
+                element.click();
+                break;
+            }
+        }
+
+        Thread.sleep(3000);
+
+        //Handle suggestion
+        driver.findElement(By.xpath("(//*[@id='autosuggest'])[1]")).sendKeys("ind");
+
+        Thread.sleep(3000);
+
+        driver.findElement(By.xpath("//a[@id='ui-id-5']")).click();
+
+        // Thread.sleep(3000);
+
+        List<WebElement> country = driver.findElements(By.cssSelector("li[class='ui-menu-item'] a"));
+
+        for (WebElement webElement : country) {
+            System.out.println("Ini adalah negara " + webElement.getText());
+            if (webElement.getText().equals("Indonesia")) {
+                webElement.click();
+                break;
+            }
+        }
+
+        Thread.sleep(3000);
+
+        //Hande radio button
+        driver.findElement(By.id("ctl00_mainContent_rbtnl_Trip_0")).click();
+
+        //Handle checkbox
+        driver.findElement(By.id("ctl00_mainContent_chk_friendsandfamily")).click();
+
+        Thread.sleep(3000);
+
+        driver.quit();
     }
 }
