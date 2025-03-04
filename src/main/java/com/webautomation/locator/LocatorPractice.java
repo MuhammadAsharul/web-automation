@@ -6,6 +6,7 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.By.ByXPath;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
@@ -126,6 +127,7 @@ public class LocatorPractice {
         }
 
         Thread.sleep(3000);
+
 
         //Hande radio button
         driver.findElement(By.id("ctl00_mainContent_rbtnl_Trip_0")).click();
