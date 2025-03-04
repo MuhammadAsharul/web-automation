@@ -1,7 +1,9 @@
 package com.webautomation.locator;
 
 import java.time.Duration;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -53,6 +55,48 @@ public class TaskLocator {
 
         Thread.sleep(3000);
         
+        // open new window
+        driver.findElement(By.id("openwindow")).click();
+
+		Set<String> allWindows = driver.getWindowHandles();
+		ArrayList<String> tabs = new ArrayList<String>(allWindows);
+		for (String S : allWindows) {
+			System.out.println("Window " + S);
+			Thread.sleep(2000);
+		}
+		driver.switchTo().window(tabs.get(1));
+
+		// String text = driver.getTitle();
+		// System.out.println("Join Button text = " + text);
+
+		driver.switchTo().window(tabs.get(0));
+
+        Thread.sleep(3000);
+        
+        // open new tab
+        driver.findElement(By.id("opentab")).click();
+
+		Set<String> allWindow = driver.getWindowHandles();
+		ArrayList<String> tab = new ArrayList<String>(allWindow);
+		for (String S : allWindow) {
+			System.out.println("Window " + S);
+			Thread.sleep(2000);
+		}
+		driver.switchTo().window(tab.get(1));
+		driver.switchTo().window(tabs.get(0));
+
+        Thread.sleep(3000);
+
+
+        // alert
+        driver.findElement(By.id("name")).sendKeys("Asharul");
+        driver.findElement(By.id("alertbtn")).click();
+        System.out.println(driver.switchTo().alert().getText());
+
+        Thread.sleep(3000);
+
+        
+
         driver.quit();
     }
 }
