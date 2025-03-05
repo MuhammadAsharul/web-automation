@@ -95,8 +95,6 @@ public class TaskLocator {
 
         Thread.sleep(3000);
 
-        
-
         driver.quit();
     }
 }
