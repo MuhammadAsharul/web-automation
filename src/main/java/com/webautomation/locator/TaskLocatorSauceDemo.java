@@ -37,13 +37,15 @@ public class TaskLocatorSauceDemo {
 
         // checkout info
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("first-name")));
-        driver.findElement(By.name("first-name")).sendKeys("Albert");
-        driver.findElement(By.name("last-name")).sendKeys("Einstein");
+        driver.findElement(By.id("first-name")).sendKeys("Albert");
+        driver.findElement(By.id("last-name")).sendKeys("Einstein");
         driver.findElement(By.id("postal-code")).sendKeys("12345");
 
         // finish
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("continue")));
         driver.findElement(By.id("continue")).click();
+
+        // 
 
         driver.close();
     }
