@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Automation Execution Suite">
-    <test name="MyTestGroup">
-        <parameter name="program" value="Bootcamp API Automation"></parameter>
-        <classes>
-            <class name="automation.StandAloneTestNGImpl"/>
-        </classes>
-    </test>
-</suite>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<!-- <suite name="AllTestsSuite" verbose="1"> -->
+    <suite name="Annotation Execution Suite" >
+        <test name="MyTestGroup">
+        <parameter name="program"  value="Bootcamp API Automation"/>
+            <classes>
+                <class name="automation.StandAloneTestNGImplTest" />
+                <class name="automation.StandAloneTestNGImplTest2" />
+            </classes>
+        </test>
+    </suite>
+<!-- </suite> -->
