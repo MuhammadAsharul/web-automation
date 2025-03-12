@@ -16,7 +16,8 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-public class StandAloneTestNGImpl {
+
+public class StandAloneTestNGImplTest {
     /* 
      * Annotation
      * dataprovider
@@ -125,8 +126,9 @@ public class StandAloneTestNGImpl {
 
     }
     @AfterMethod
-    public void TearDown(){
-        driver.close();
+    public void TearDown() throws InterruptedException{
+        Thread.sleep(2000);
+        driver.quit();
     }
 
     // @DataProvider
