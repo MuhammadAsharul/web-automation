@@ -22,7 +22,6 @@ public class InCompletePage extends AbstractComponent{
 
     By completeText = By.className("complete-header");
 
-
     public String getCheckoutComplete(){
         visibilityOfElementLocated(completeText);
         return checkoutComplete.getText();

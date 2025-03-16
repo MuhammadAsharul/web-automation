@@ -1,7 +1,7 @@
-Feature: Purchase the order from ecommerce
+# Feature: Purchase the order from ecommerce
 
-Background: Buyer landed to website
-    Given Buyer landing to ecommerce
+# Background: Buyer landed to website
+#     Given Buyer landing to ecommerce
 
 # Scenario: Create Order Positive Case
 #     Given Buyer logged to website
@@ -11,20 +11,20 @@ Background: Buyer landed to website
 #     Then Buyer will see message is displayed on confirmation page
 
 
-Scenario Outline: Create Order Positive Case
-    Given Buyer logged to website email <email> and password <password>
-    When Buyer add <product_name> to cart
-    And Buyer checkout <product_name>
-    And Buyer place order <destination>
-    Then Buyer will see message is displayed on confirmation page THANKYOU FOR THE ORDER.
+# Scenario Outline: Create Order Positive Case
+#     Given Buyer logged to website email <email> and password <password>
+#     When Buyer add <product_name> to cart
+#     And Buyer checkout <product_name>
+#     And Buyer place order <destination>
+#     Then Buyer will see message is displayed on confirmation page THANKYOU FOR THE ORDER.
 
-    Examples: 
-    | email               | password   | product_name | destination |
-    | masharul51@gmai.com | Boyolali15 | ZARA COAT 3  | Indonesia   |
+#     Examples: 
+#     | email               | password   | product_name | destination |
+#     | masharul51@gmai.com | Boyolali15 | ZARA COAT 3  | Indonesia   |
 
 # Scenario Outline: Login Negative Case
 #     When Buyer logged to website email <email> and password <pasword>
-#     Then buer will see toaster
+#     Then buyer will see toaster
     
 #     Examples: 
 #     |email               | password   | 

@@ -25,7 +25,6 @@ public class StandAloneTestNGImplTest2 {
      * Running Test
      */
     public WebDriver driver;
-
     @BeforeMethod
     public void setUp(){
         System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
