@@ -43,9 +43,8 @@ public class AddToCartPage extends AbstractComponent{
     public void toCheckoutPage(){
         visibilityOfElementLocated(checkoutBtn);
     }
-
-
-    public void addToCart(String productName) throws InterruptedException {
+    
+    public void addToCartt(String productName) throws InterruptedException {
         visibilityOfElementLocated(listElement);
         productt = getProductName(productName);
         System.out.println("list product" + productt);

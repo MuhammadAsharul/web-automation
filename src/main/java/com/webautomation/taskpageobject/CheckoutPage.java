@@ -31,7 +31,7 @@ public class CheckoutPage extends AbstractComponent{
 
     By visibilityOfElementLocated = By.id("first-name");
 
-    public void checkout(String firstNamee, String lastNamee, String postalCodee) throws InterruptedException{
+    public void checkoutt(String firstNamee, String lastNamee, String postalCodee) throws InterruptedException{
         visibilityOfElementLocated(visibilityOfElementLocated);
         firstName.sendKeys(firstNamee);
         lastName.sendKeys(lastNamee);

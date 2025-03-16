@@ -78,8 +78,6 @@ public class StandAloneTestNGImplTest {
 
 
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".totalRow button")));
-
-
         driver.findElement(By.cssSelector(".totalRow button")).click();
 
         // Thread.sleep(5000);

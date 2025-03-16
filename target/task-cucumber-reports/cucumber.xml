@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="6.163" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-03-16T14:20:42.224012800Z">
+<testcase classname="SauceDemo Negative Testing" name="Buyer fails to complete the purchase due to missing or invalid details - #1.1" time="6.017">
+<system-out><![CDATA[
+Given Buyer landing to ecommercee...........................................passed
+Given Buyer logs in to SauceDemo using username standard_user and password secret_sauce.passed
+When Buyer adds Sauce Labs Backpack to the cart, goes to the cart page......passed
+And Buyer proceeds to checkout Sauce Labs Backpack..........................passed
+And Buyer enters shipping details: , Doe, 12345.............................passed
+Then Buyer sees an error message Error: First Name is required..............passed
+]]></system-out>
+</testcase>
+</testsuite>
